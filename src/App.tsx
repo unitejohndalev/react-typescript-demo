@@ -11,11 +11,15 @@ import Status from "./components/Status";
 import Box from "./components/context/Box";
 import ThemeContextProvider from "./components/context/ThemeContext";
 import { UserContextProvider } from "./components/context/UserContext";
-import Counter from "./components/state/Counter";
+import {Counter} from "./components/class/Counter";
 import LoggedIn from "./components/state/LoggedIn";
 import User from "./components/context/User";
 import DomRef from "./components/ref/DomRef";
 import MutableRef from "./components/ref/MutableRef";
+import Private from "./components/auth/Private";
+import Profile from "./components/auth/Profile";
+import List from "./components/generics/List";
+import { RandomNumber } from "./components/restrictions/RandomNumber";
 
 function App() {
   //object
@@ -66,7 +70,36 @@ function App() {
         <User/>
       </UserContextProvider> */}
       {/* <DomRef/> */}
-      <MutableRef/>
+      {/* <MutableRef/> */}
+      {/* <Counter message='The count value is' count={10}/> */}
+      {/* <Private isLoggedIn={false} component={Profile}/>
+       */}
+      {/* <List
+        items={["Goku", "Luffy", "Naruto"]}
+        onClick={(item) => console.log(item)}
+      />
+      <List items={[1, 2, 3]} onClick={(item) => console.log(item)} /> */}
+      {/* <List
+        items={[
+          {
+            id: 1,
+            first: "Potek",
+            last: "Lagot",
+          },
+          {
+            id: 2,
+            first: "Potek",
+            last: "Lagot",
+          },
+          {
+            id: 3,
+            first: "Potek",
+            last: "Lagot",
+          }
+        ]}
+        onClick={(item) => console.log(item)}
+      /> */}
+      {/* <RandomNumber value={10} isPositive /> */}
     </div>
   );
 }
