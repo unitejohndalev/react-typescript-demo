@@ -11,7 +11,7 @@ import Status from "./components/Status";
 import Box from "./components/context/Box";
 import ThemeContextProvider from "./components/context/ThemeContext";
 import { UserContextProvider } from "./components/context/UserContext";
-import {Counter} from "./components/class/Counter";
+import { Counter } from "./components/class/Counter";
 import LoggedIn from "./components/state/LoggedIn";
 import User from "./components/context/User";
 import DomRef from "./components/ref/DomRef";
@@ -20,6 +20,10 @@ import Private from "./components/auth/Private";
 import Profile from "./components/auth/Profile";
 import List from "./components/generics/List";
 import { RandomNumber } from "./components/restrictions/RandomNumber";
+import Toast from "./components/templateLiterals/Toast";
+import ButtonComponent from "./components/html/Button";
+import { CustomComponent } from "./components/html/CustomComponent";
+import { TextPropsComponent } from "./components/polymorphic/Text";
 
 function App() {
   //object
@@ -100,6 +104,14 @@ function App() {
         onClick={(item) => console.log(item)}
       /> */}
       {/* <RandomNumber value={10} isPositive /> */}
+      {/* <Toast position="center"/> */}
+      {/* <ButtonComponent variant="primary" onClick={() => console.log("clicked")}>
+       This is a button
+      </ButtonComponent> */}
+      {/* <CustomComponent name="dale" isLoggedIn={true}/> */}
+      <TextPropsComponent as='h1' size="lg">Heading</TextPropsComponent>
+      <TextPropsComponent as='p' size="md" >Paragraph</TextPropsComponent>
+      <TextPropsComponent as='label' htmlFor="someId" size="sm" color="primary">Label</TextPropsComponent>
     </div>
   );
 }
